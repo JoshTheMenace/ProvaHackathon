@@ -1,0 +1,75 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 240, 242, 245;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Remove the hover highlight used in the original design */
+.design-hover-highlight {
+  outline: none !important;
+  cursor: default;
+  z-index: auto;
+}
+
+/* Design preview container styling */
+.design-preview {
+  transition: all 0.3s ease;
+}
+
+/* Design card swipe animations */
+.swipe-left-exit {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.swipe-right-exit {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.swipe-enter {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.swipe-enter-active {
+  opacity: 1;
+}
+
+/* History navigation */
+.history-item {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.history-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Make sure clickable elements inside the designs are visible */
+.design-container button,
+.design-container a,
+.design-container input,
+.design-container select,
+.design-container textarea {
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
