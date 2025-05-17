@@ -94,7 +94,7 @@ export default function PreviewPage() {
         <div className="text-center max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">No Designs Found</h2>
           <p className="text-gray-600 mb-6">
-            It seems you don't have any designs yet or they have been cleared.
+            It seems you dont have any designs yet or they have been cleared.
           </p>
           <button
             onClick={() => router.push('/')}
